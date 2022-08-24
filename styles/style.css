@@ -4,7 +4,7 @@
 	/* Layout */
 	--mobile: 375px;
 	--desktop: 1440px;
-	--font-size: 16px;
+	--font-size: 1rem;
 	--heading-text: 'Fraunces', serif;
 
 	/* Colors */
@@ -33,6 +33,7 @@
 }
 
 body {
+	width: 100vw;
 	font-family: 'Barlow', sans-serif;
 	font-weight: 600;
 	color: var(--black);
@@ -49,7 +50,7 @@ h5 {
 }
 
 h2 {
-	font-size: 20px;
+	font-size: 1.25rem;
 	font-weight: 900;
 	margin-bottom: 60px;
 	color: var(--gray);
@@ -58,19 +59,19 @@ h2 {
 }
 
 h3 {
-	font-size: 36px;
+	font-size: 2.25rem;
 	font-weight: 900;
 	margin-bottom: 24px;
 }
 
 h4 {
-	font-size: 26px;
+	font-size: 1.625rem;
 	font-weight: 900;
 	margin-bottom: 16px;
 }
 
 h5 {
-	font-size: 18px;
+	font-size: 1.125rem;
 	font-weight: 900;
 	margin-bottom: 8px;
 }
@@ -83,7 +84,7 @@ blockquote {
 }
 
 span {
-	font-size: 14px;
+	font-size: 0.875rem;
 	color: var(--gray);
 }
 
@@ -132,7 +133,7 @@ header .button:hover {
 }
 
 .hero h1 {
-	font-size: 56px;
+	font-size: 3.5rem;
 	font-weight: 900;
 	color: var(--white);
 	text-transform: uppercase;
@@ -275,4 +276,111 @@ footer .socials {
 	justify-content: center;
 	font-weight: 400;
 	gap: 20px;
+}
+
+/* ===== MOBILE ===== */
+
+@media screen and (max-width: 800px) {
+	/* Header */
+	header {
+		padding: 30px 20px;
+	}
+
+	header nav ul {
+		width: 20px;
+		height: 4px;
+		background: var(--white);
+		border-radius: 4px;
+		position: relative;
+	}
+
+	header nav ul::after {
+		content: '';
+		width: 20px;
+		height: 4px;
+		background: var(--white);
+		border-radius: 4px;
+		transform: translateY(7px);
+		position: absolute;
+	}
+
+	header nav ul::before {
+		content: '';
+		width: 20px;
+		height: 4px;
+		background: var(--white);
+		border-radius: 4px;
+		transform: translateY(14px);
+		position: absolute;
+	}
+
+	header nav ul li {
+		display: none;
+	}
+
+	/* Hero */
+	.hero h1 {
+		font-size: 6vw;
+	}
+
+	/* Resume */
+	.resume {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(6, 70vh);
+	}
+
+	.resume .card {
+		max-width: 85vw;
+		width: 85vw;
+		text-align: center;
+	}
+
+	.ord-1 {
+		order: 1;
+	}
+
+	.ord-2 {
+		order: 2;
+	}
+
+	.ord-3 {
+		order: 3;
+	}
+
+	.ord-4 {
+		order: 4;
+	}
+
+	.ord-5 {
+		order: 5;
+	}
+
+	.ord-6 {
+		order: 6;
+	}
+
+	/* ===== TESTIMONIALS ===== */
+	.testimonials {
+		padding: 40px 20px;
+	}
+
+	.testimonials h2 {
+		margin-bottom: 40px;
+	}
+
+	.testimonials .clients {
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+	}
+
+	.testimonials .client img,
+	.testimonials .client blockquote {
+		margin-bottom: 20px;
+	}
+
+	/* ===== GALLERY ===== */
+	.gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
