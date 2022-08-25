@@ -126,7 +126,7 @@ header .button:hover {
 .hero {
 	width: 100vw;
 	height: 100vh;
-	background: url(/images/desktop/image-header.jpg) bottom;
+	background: url(../images/desktop/image-header.jpg) bottom;
 	background-size: cover;
 	display: grid;
 	place-items: center;
